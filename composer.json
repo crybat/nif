@@ -1,7 +1,7 @@
 {
     "name": "crybat/nif",
     "description": "Cria e valida check digit para nif",
-    "license": "Public Domain",
+    "license": "MIT",
     "authors": [
         {
             "name": "Mauro Pinto",
@@ -10,6 +10,9 @@
     ],
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
+    },
+    "require": {
+
     },
     "autoload": {
         "psr-0": { "": "src/" }
