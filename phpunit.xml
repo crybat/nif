@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit bootstrap="./src/Tests/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="crybat-nif tests">
+            <directory>./src/Tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

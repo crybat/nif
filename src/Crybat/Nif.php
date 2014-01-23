@@ -4,8 +4,8 @@
  * @link https://github.com/xi-project/xi-algorithm/blob/master/library/Xi/Algorithm/Luhn.php
  * @link http://forum.zwame.pt/showthread.php?t=401728&p=4348725&viewfull=1#post4348725
  */
-class Nif {
-
+class Crybat_Nif
+{
     /**
      * Generates number with check digit
      *
@@ -23,7 +23,7 @@ class Nif {
 
         $stack = 11 - ($stack % 11);
 
-        return (int) ($number . ($stack >= 10 ? 0 : $stack));
+        return (int) ($number.($stack >= 10 ? 0 : $stack));
     }
 
     /**
@@ -34,9 +34,9 @@ class Nif {
      */
     public static function isValid($number)
     {
-        if ( ! is_numeric($number) ||
-             ! strlen($number) === 9 ||
-             ! self::_isTypeCorrect($number)
+        if (!is_numeric($number) ||
+            !strlen($number) === 9 ||
+            !self::_isTypeCorrect($number)
         ) {
             return false;
         }
@@ -61,9 +61,7 @@ class Nif {
     protected static function _isTypeCorrect($number)
     {
         return in_array(
-            self::type($number),
-            array(1, 2, 4, 5, 6 , 7, 8, 9),
-            true
+            self::type($number), array(1, 2, 4, 5, 6, 7, 8, 9), true
         );
     }
 
